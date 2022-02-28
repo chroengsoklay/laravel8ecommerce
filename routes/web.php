@@ -56,6 +56,8 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+
+// For Frontend
 Route::get('/', HomeComponent::class);
 Route::get('/shop', ShopComponent::class)->name('product.shop');
 Route::get('/cart', CartComponent::class)->name('product.cart');
@@ -116,3 +118,5 @@ Route::middleware(['auth:sanctum','verified','authadmin'])->group( function(){
     Route::get('/admin/attribute/add', AdminAddAttributeComponent::class)->name('admin.add_attribute');
     Route::get('/admin/attribute/edit/{attribute_id}', AdminEditAttributeComponent::class)->name('admin.edit_attribute');
 });
+
+    
